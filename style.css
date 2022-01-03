@@ -1,0 +1,28 @@
+#logInField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 90vh;
+}
+
+.submitField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow:  3px 3px 6px 6px gray;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+#email {
+    width: 95%;
+}
+
+#password {
+    width: 95%;
+}
