@@ -26,3 +26,34 @@
 #password {
     width: 95%;
 }
+
+#transictionArea {
+    display: none;
+    padding: 2em 10em;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+.status {
+    margin: 0px 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.deposit {
+    background: slateblue;
+    border-radius: 5px;
+}
+
+.withdraw {
+    background: lightsalmon;
+    border-radius: 5px;
+}
+
+.balance {
+    background: orange;
+    border-radius: 5px;
+}

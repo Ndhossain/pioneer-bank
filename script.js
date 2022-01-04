@@ -1,4 +1,7 @@
 const loginButton = document.getElementById('logIn');
-loginButton.addEventListener('click', function (){
-    console.log('clicked me');
+const logInArea = document.getElementById('logInField')
+const transictionArea = document.getElementById('transictionArea');
+loginButton.addEventListener('click', function () {
+    logInArea.style.display = 'none';
+    transictionArea.style.display = 'block';
 })
