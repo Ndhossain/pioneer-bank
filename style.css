@@ -29,7 +29,7 @@
 
 #transictionArea {
     display: none;
-    padding: 2em 10em;
+    padding: 5em 10em;
 }
 
 .row {
@@ -56,4 +56,14 @@
 .balance {
     background: orange;
     border-radius: 5px;
+}
+
+.submitArea {
+    box-shadow:  3px 3px 6px 6px gray;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+#amount {
+    width: 90%;
 }
