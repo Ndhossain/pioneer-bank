@@ -64,6 +64,6 @@
     border-radius: 5px;
 }
 
-#amount {
+#depoAmount, #withAmount {
     width: 90%;
 }
