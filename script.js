@@ -1,27 +1,57 @@
+// all buttons
+
+function buttons(id) {
+    return document.getElementById(id);
+}
+
+
 // enter button
 
-const loginButton = document.getElementById('logIn');
+
 const logInArea = document.getElementById('logInField')
 const transictionArea = document.getElementById('transictionArea');
-loginButton.addEventListener('click', function () {
+buttons('logIn').addEventListener('click', function () {
     logInArea.style.display = 'none';
     transictionArea.style.display = 'block';
 })
 
 // deposit button
 
-const depositButton = document.getElementById('depositBtn');
+buttons('depositBtn').addEventListener('click', function () {
+    let bal = amount('depoAmount');
 
-depositButton.addEventListener('click', function () {
-    const depositAmount = document.getElementById('depoAmount').value;
-    const depositAmountNumber = parseFloat(depositAmount);
+    balance('depoBalance', bal);
+
+    balance('totalBalance', bal);
+
+    document.getElementById('depoAmount').value = '';
 });
+
+// balance showing controler
+
+function balance(id, NumberOfAmount) {
+    let Balance = document.getElementById(id).innerText;
+    let BalanceNumber = parseFloat(Balance);
+    Balance = NumberOfAmount + BalanceNumber;
+    document.getElementById(id).innerText = Balance;
+}
+
+// value of amount controler
+
+function amount(id) {
+    const Amount = document.getElementById(id).value;
+    const AmountNumber = parseFloat(Amount);
+    return AmountNumber;
+}
 
 // withdraw button
 
-const withdrawButton = document.getElementById('withdrawBtn');
+buttons('withdrawBtn').addEventListener('click', function () {
+    let bal = amount('withAmount');
 
-withdrawButton.addEventListener('click', function () {
-    const withdrawAmount = document.getElementById('withAmount').value;
-    const withdrawAmountNumber = parseFloat(withdrawAmount);
+    balance('withBalance', bal);
+
+    balance('totalBalance',-1 * bal);
+
+    document.getElementById('withAmount').value = '';
 })
